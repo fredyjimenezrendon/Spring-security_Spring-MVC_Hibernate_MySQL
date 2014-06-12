@@ -1,0 +1,41 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<http auto-config="true" use-expressions="true">
+	
+		<headers>
+			<cache-control />
+		</headers>
+	
+		<intercept-url pattern="/inicio**" access="hasRole('ROLE_USER')" />
+		
+		<form-login 
+		    login-page="/ingreso" 
+		    default-target-url="/inicio" 
+			authentication-failure-url="/loginError"
+			username-parameter="usuario"
+			password-parameter="pass" 
+			login-processing-url="/auth/login_check" />
+		<logout logout-success-url="/salida" delete-cookies="JSESSIONID" />
+		<csrf />
+				
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+		    <password-encoder ref="encoder" />
+			<jdbc-user-service data-source-ref="dataSource"
+				users-by-username-query="select login,clave,habilitado from usuario_tbl where login=?"
+				authorities-by-username-query="select login,rol from rol_usuario_tbl where login =? " />
+		</authentication-provider>
+	</authentication-manager>
+ 
+	<beans:bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<beans:constructor-arg name="strength" value="10" />
+	</beans:bean>
+
+</beans:beans>

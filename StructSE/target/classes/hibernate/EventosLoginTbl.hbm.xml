@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9/06/2014 07:01:05 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="co.electrovan.structse.modelo.EventosLoginTbl" table="eventos_login_tbl" catalog="test">
+        <id name="idEventoLogin" type="int">
+            <column name="id_evento_login" />
+            <generator class="assigned" />
+        </id>
+        <property name="login" type="string">
+            <column name="login" length="50" not-null="true" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="fecha" length="19" not-null="true" />
+        </property>
+        <property name="observaciones" type="string">
+            <column name="observaciones" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

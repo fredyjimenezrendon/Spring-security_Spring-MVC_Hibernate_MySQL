@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/06/2014 11:14:28 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="co.electrovan.structse.modelo.EventosCambioClaveTbl" table="eventos_cambio_clave_tbl" catalog="test">
+        <id name="idCambioClave" type="java.lang.Integer">
+            <column name="id_cambio_clave" />
+            <generator class="identity" />
+        </id>
+        <property name="usuario" type="string">
+            <column name="usuario" length="50" not-null="true" />
+        </property>
+        <property name="nuevaClave" type="string">
+            <column name="nueva_clave" not-null="true" />
+        </property>
+        <property name="fechaSolicitud" type="timestamp">
+            <column name="fecha_solicitud" length="19" not-null="true" />
+        </property>
+        <property name="estadoSolicitud" type="boolean">
+            <column name="estado_solicitud" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

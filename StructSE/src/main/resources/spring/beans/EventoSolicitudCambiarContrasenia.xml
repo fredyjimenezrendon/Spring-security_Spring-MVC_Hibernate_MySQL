@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" >
+ 
+   <bean id="EventoSolicitudCambiarContraseniaBo" class="co.electrovan.structse.bo.impl.EventoSolicitudCambiarContraseniaBoImpl" >
+   		<property name="EventoSolicitudCambiarContraseniaDao" ref="EventoSolicitudCambiarContraseniaDao" />
+   </bean>
+ 
+   <bean id="EventoSolicitudCambiarContraseniaDao" class="co.electrovan.structse.dao.impl.EventoSolicitudCambiarContraseniaDaoImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+ 
+</beans>

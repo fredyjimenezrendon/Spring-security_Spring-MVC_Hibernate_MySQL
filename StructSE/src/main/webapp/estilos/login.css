@@ -1,0 +1,164 @@
+/************ Estilos para el login ************/
+
+.gridContainer #msglogin {
+    color: #000000;
+    display: none;
+    font-family: 'midiet_light';
+    font-size: 1.125em;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    padding: 0 0 0 70px;
+    position: relative;
+    top: 50px;
+    vertical-align: middle;
+    width: 350px;
+}
+
+.gridContainer #msglogin figure {
+
+    height: 50px;
+    left: 10px;
+    position: absolute;
+    top: 0;
+    width: 50px;
+}
+
+.gridContainer main {
+    height: 300px;
+    margin-top: -150px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.gridContainer main #wall {
+    background-color: #1F303E;
+    box-shadow: 7px 0 4px 3px #000000;
+
+    box-sizing:border-box;
+    height: 300px;
+    margin-left: 34%;
+    position: relative;
+    width: 66%;
+}
+
+.gridContainer main #ilogo {
+    float: left;
+    height: 300px;
+    margin-left: 5%;
+    position: relative;
+    width: 300px;
+}
+
+.gridContainer main figure#tlogo {
+	float: left;
+    margin-left: -25px;
+    position: relative;
+    width: 51px;
+}
+
+.gridContainer main figure#tlogo img {
+    margin-top: 15px;
+}
+
+.gridContainer main form {
+	float: left;
+    height: auto;
+	margin-left: 100px;
+	margin-top: 60px;
+	width: 350px;
+}
+
+.gridContainer main #izq {
+    float: left;
+    height: auto;
+    position: relative;
+    top: 50px;
+    width: 300px;
+}
+
+.gridContainer main #izq figure#ingreso {
+    text-align: center;    
+}
+
+.gridContainer main #izq #cambioclave {
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'midiet_medium';
+    font-size: 1.000em;
+    margin: 10px auto 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.gridContainer footer {
+    bottom: 0;
+    color: #1F303E;
+    font-family: 'midiet_medium';
+    font-size: 1.000em;
+    padding-bottom: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+/************ Estilos para los campos input ************/
+
+form input[type="text"], form input[type="password"]  {
+    border: 3px #1F303E;
+    border-top: ridge;
+    border-left: ridge;
+    border-right: groove;
+    border-bottom: groove;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'midiet_medium';
+    font-size: 1.000em;
+    height: 40px;
+    margin: 0 auto 40px;
+    padding: 5px 20px 5px 20px;
+    width: 100%;
+}
+
+form input[type="submit"], form input[type="button"] {
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 70%,rgba(181,181,181,1) 90%);
+    box-shadow: 0 5px 3px -2px #1F1F1F;
+    cursor: pointer;
+    display: block;
+    font-family: 'midiet_medium';
+    font-size: 1.250em;
+    height: 30px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.modales form input[type="text"], .modales form input[type="password"]  {
+    margin: 0 auto 10px;
+}
+
+.modales form input[type="submit"], .modales form input[type="button"] {
+    display: inline-block;
+    float: right;
+    width: 150px;
+}
+
+.modales #msgcomprobacion {
+    border: 2px #D63636 solid;
+    border-radius: 5px;
+    color: #D63636;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 90%;
+}
+
+/************ Estilos para los  modales ************/
+
+.modales {
+    font-family: 'midiet_medium';
+    font-size: 0.875em;
+}

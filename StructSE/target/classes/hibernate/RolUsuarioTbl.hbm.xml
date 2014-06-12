@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9/06/2014 07:01:05 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="co.electrovan.structse.modelo.RolUsuarioTbl" table="rol_usuario_tbl" catalog="test">
+        <id name="idUsuarioRol" type="java.lang.Integer">
+            <column name="id_usuario_rol" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="usuarioTbl" class="co.electrovan.structse.modelo.UsuarioTbl" fetch="select">
+            <column name="login" not-null="true" />
+        </many-to-one>
+        <property name="rol" type="string">
+            <column name="rol" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
